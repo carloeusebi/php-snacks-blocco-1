@@ -1,3 +1,11 @@
+<?php
+
+if (isset($_GET['paragraph'])) {
+  $paragraphs = explode('.', $_GET['paragraph']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,11 +47,20 @@
 
     <!-- PARAGRAPH DIVIDER -->
     <h2>Paragraph divider</h2>
+    <h4>You can copy this paragraph for testing purposes :)</h4>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     <form action="" method="get" novalidate>
       <label for="paragraph">Enter a text with several sentences separated by dots "."</label><br>
       <textarea name="paragraph" id="paragraph" cols="60" rows="10"></textarea><br>
       <button>Split into paragraphs</button>
     </form>
+    <?php if (isset($paragraphs)) : ?>
+
+      <?php foreach ($paragraphs as $paragraph) : ?>
+        <p><?= $paragraph ?></p>
+      <?php endforeach ?>
+
+    <?php endif    ?>
   </main>
 </body>
 

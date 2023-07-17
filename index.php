@@ -21,6 +21,7 @@
     <section id="verify-form">
       <h2>Verify:</h2>
       <form action="verify.php" method="get" novalidate>
+        <!-- All fields are type 'text' to allow all parameters to pass through html validation and get validate only via php validation -->
         <!-- name -->
         <label for="name">Name: </label>
         <input type="text" name="name" id="name">
@@ -30,6 +31,8 @@
         <!-- age -->
         <label for="age">Age: </label>
         <input type="text" name="age" id="age">
+
+        <button>Verify</button>
       </form>
     </section>
   </main>

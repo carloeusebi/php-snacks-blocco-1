@@ -34,7 +34,16 @@
 
         <button>Verify</button>
       </form>
+      <hr>
     </section>
+
+    <!-- PARAGRAPH DIVIDER -->
+    <h2>Paragraph divider</h2>
+    <form action="" method="get" novalidate>
+      <label for="paragraph">Enter a text with several sentences separated by dots "."</label><br>
+      <textarea name="paragraph" id="paragraph" cols="60" rows="10"></textarea><br>
+      <button>Split into paragraphs</button>
+    </form>
   </main>
 </body>
 
